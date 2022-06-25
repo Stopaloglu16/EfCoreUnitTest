@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Aggregates
+namespace TestProject1
 {
-    internal class ParentDto
+    internal class InMemoryDbTests
     {
     }
 }
