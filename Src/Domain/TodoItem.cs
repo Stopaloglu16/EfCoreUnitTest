@@ -12,8 +12,9 @@ namespace Domain
         public string Task { get; set; }
 
 
-        public int ListId { get; set; }
-        public TodoList List { get; set; }
+        public Guid TodoListId { get; set; }
+        public TodoList TodoList { get; set; }
 
     }
+
 }
