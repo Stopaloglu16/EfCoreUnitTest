@@ -3,18 +3,21 @@ using Application.Aggregates.TodoListAgg;
 using Domain;
 using Microsoft.EntityFrameworkCore;
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace TestProject1
 {
-    public class InMemoryDbTests : TestBase
+    public class SqliteTests :TestBase
     {
 
-        // Added new lines to have same line numbers as
-        // the Sqlite unit test file.
-        public InMemoryDbTests() { }
-
+        public SqliteTests()
+        {
+            UseSqlite();
+        }
 
         [Test]
         public async Task ShouldBeAbleToAddAndGetEntity()
@@ -40,14 +43,12 @@ namespace TestProject1
 
             // Execute
             var data = await context.TodoLists.ToListAsync();
-                        
+
             // Assert
             Assert.AreEqual(1, data.Count);
             Assert.AreEqual(2, data[0].Items.Count);
 
         }
-
-
 
     }
 }

@@ -11,12 +11,15 @@ DbContextOptionsBuilder optionsBuilder = new DbContextOptionsBuilder();
 
 optionsBuilder.UseSqlServer("Server=LAPTOP-B7PT29QB\\SQLEXPRESS;Database=TodoApp;Trusted_Connection=True;MultipleActiveResultSets=true");
 
-
 TodoDbContext todoDbContext = new TodoDbContext(optionsBuilder.Options);
 
 
 var myList = new TodoList();
-myList.Title = "test list";
+myList.Title = "House list";
+
+myList.Items = new List<TodoItem>();
+
+myList.Items.Add(new TodoItem() { Task = "clean windows" });
 
 todoDbContext.TodoLists.Add(myList);
 

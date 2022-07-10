@@ -1,3 +1,4 @@
+using Infrasture.Repo;
 using Infrasture.Repository;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +12,7 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<TodoDbContext>(options =>
                    options.UseSqlServer(connectionString));
 
+builder.Services.AddScoped<ITodoListRepository, TodoListRepository>();
 
 
 // Add services to the container.
