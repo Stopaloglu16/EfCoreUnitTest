@@ -14,5 +14,7 @@ namespace Application.Aggregates.TodoItemAgg
         public string Task { get; set; }
 
 
+        public Guid TodoListId { get; set; }
+
     }
 }

@@ -11,7 +11,7 @@ namespace Domain
         public Guid Id { get; set; }
         public string Title { get; set; }
 
-        public IList<TodoItem> Items { get; set; }
+        public virtual ICollection<TodoItem> Items { get;  set; } = new List<TodoItem>();
 
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.Aggregates.TodoListAgg
 {
-    internal class CreateTodoListRequest
+    public class CreateTodoListRequest
     {
         public CreateTodoListRequest(string title, IList<TodoItem> items)
         {
