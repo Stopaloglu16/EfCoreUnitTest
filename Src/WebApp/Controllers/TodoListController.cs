@@ -2,7 +2,6 @@
 using Application.Aggregates.TodoListAgg;
 using Domain;
 using Infrasture.Repo;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApp.Controllers
@@ -15,7 +14,7 @@ namespace WebApp.Controllers
         private readonly ITodoListRepository _todoListRepository;
 
         public TodoListController(ITodoListRepository todoListRepository)
-        { 
+        {
             _todoListRepository = todoListRepository;
         }
 
@@ -42,7 +41,7 @@ namespace WebApp.Controllers
 
                 for (int aa = 0; aa < myLl.Count; aa++)
                 {
-                    getTodoListDtos[i].Items.Add(  new GetTodoItemDto() { Id = myLl[aa].Id, Task = myLl[aa].Task } );
+                    getTodoListDtos[i].Items.Add(new GetTodoItemDto() { Id = myLl[aa].Id, Task = myLl[aa].Task });
                 }
 
             }

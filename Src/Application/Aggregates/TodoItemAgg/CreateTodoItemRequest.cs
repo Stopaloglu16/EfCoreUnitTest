@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Application.Aggregates.TodoItemAgg
+﻿namespace Application.Aggregates.TodoItemAgg
 {
     public class CreateTodoItemRequest
     {
-        public CreateTodoItemRequest( string task)
+        public CreateTodoItemRequest(string task)
         {
             Id = new Guid();
             Task = task;

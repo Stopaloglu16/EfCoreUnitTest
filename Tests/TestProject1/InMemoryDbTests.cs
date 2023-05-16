@@ -40,7 +40,7 @@ namespace TestProject1
 
             // Execute
             var data = await context.TodoLists.ToListAsync();
-                        
+
             // Assert
             Assert.AreEqual(1, data.Count);
             Assert.AreEqual(2, data[0].Items.Count);
